@@ -1,2 +1,0 @@
-CREATE DATABASE IF NOT EXISTS `app_db_test`;
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';

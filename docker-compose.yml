@@ -4,11 +4,8 @@ services:
         build:
             context: ./
             dockerfile: deployment/docker/Dockerfile
-            args:
-                XDEBUG: "true"
-        working_dir: /var/www/
         volumes:
-            - .:/var/www/
+            - .:/var/www
             - ./deployment/docker/php.ini:/usr/local/etc/php/conf.d/php.ini
         links:
             - mysql
@@ -19,7 +16,7 @@ services:
             context: .
             dockerfile: deployment/docker/Dockerfile.phpbatch
         volumes:
-            - .:/var/www/
+            - .:/var/www
         links:
             - mysql
             - redis
@@ -35,15 +32,15 @@ services:
         depends_on:
             - php
         ports:
-            - "${NGINX_PORT-8000}:80"
+            - "${EXTERNAL_NGINX_PORT-8000}:80"
         volumes:
-            - .:/var/www/
+            - .:/var/www
 
     mysql:
         image: mysql:latest
         command: mysqld --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
         ports:
-            - "${DB_PORT-3306}:3306"
+            - "${EXTERNAL_DB_PORT-3306}:3306"
         environment:
             MYSQL_DATABASE: ${DB_DATABASE}
             MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
@@ -52,7 +49,6 @@ services:
             MYSQL_TCP_PORT: ${DB_PORT}
         volumes:
             - db:/var/lib/mysql
-            - ./deployment/docker/mysql-database-test.sql:/docker-entrypoint-initdb.d/mysql-database-test.sql
 
     # node:
     #     build:
@@ -66,7 +62,7 @@ services:
     redis:
         image: redis
         ports:
-            - "6379:6379"
+            - "${EXTERNAL_REDIS_PORT-6379}:6379"
 
 volumes:
     db:

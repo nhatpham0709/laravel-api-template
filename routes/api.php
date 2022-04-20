@@ -25,7 +25,7 @@ Route::prefix('v1/users')->group(function () {
     Route::prefix('auth')->group(function () {
         Route::get('/profile', function (Request $request) {
             return $request->user();
-        });
+        })->middleware('auth:sanctum');
     
         Route::post('/register', [RegisteredUserController::class, 'store'])
             ->middleware('guest');

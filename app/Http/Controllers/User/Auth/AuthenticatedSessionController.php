@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Transformers\SuccessResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -13,24 +14,24 @@ class AuthenticatedSessionController extends Controller
      * Handle an incoming authentication request.
      *
      * @param  \App\Http\Requests\Auth\LoginRequest  $request
-     * @return \Illuminate\Http\Response
+     * @return SuccessResource
      */
-    public function store(LoginRequest $request)
+    public function store(LoginRequest $request): SuccessResource
     {
         $request->authenticate();
 
         $request->session()->regenerate();
 
-        return response()->noContent();
+        return new SuccessResource();
     }
 
     /**
      * Destroy an authenticated session.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return SuccessResource
      */
-    public function destroy(Request $request)
+    public function destroy(Request $request): SuccessResource
     {
         Auth::guard('web')->logout();
 
@@ -38,6 +39,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return response()->noContent();
+        return new SuccessResource();
     }
 }
