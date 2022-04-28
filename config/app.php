@@ -56,7 +56,9 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'frontend_url' => env('FRONTEND_URL', 'http://localhost:3000'),
+    'client_url' => env('CLIENT_URL', 'http://localhost:3000'),
+
+    'admin_url' => env('ADMIN_URL', 'http://localhost:5000'),
 
     'asset_url' => env('ASSET_URL'),
 

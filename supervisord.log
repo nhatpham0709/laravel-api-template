@@ -1903,3 +1903,53 @@
 2022-04-22 07:27:05,479 INFO success: laravel_queue_02 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2022-04-22 07:27:05,479 INFO success: laravel_queue_03 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2022-04-22 07:27:05,480 INFO success: laravel_schedule_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                2022-04-25 06:18:13,824 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-04-25 06:18:13,826 INFO supervisord started with pid 1
+2022-04-25 06:18:14,830 INFO spawned: 'laravel_queue_00' with pid 7
+2022-04-25 06:18:14,834 INFO spawned: 'laravel_queue_01' with pid 8
+2022-04-25 06:18:14,835 INFO spawned: 'laravel_queue_02' with pid 9
+2022-04-25 06:18:14,836 INFO spawned: 'laravel_queue_03' with pid 10
+2022-04-25 06:18:14,837 INFO spawned: 'laravel_schedule_00' with pid 11
+2022-04-25 06:18:16,101 INFO success: laravel_queue_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-25 06:18:16,101 INFO success: laravel_queue_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-25 06:18:16,101 INFO success: laravel_queue_02 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-25 06:18:16,102 INFO success: laravel_queue_03 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-25 06:18:16,102 INFO success: laravel_schedule_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-25 06:33:03,221 WARN received SIGQUIT indicating exit request
+2022-04-25 06:33:03,222 INFO waiting for laravel_queue_00, laravel_queue_01, laravel_queue_02, laravel_queue_03, laravel_schedule_00 to die
+2022-04-25 06:33:03,229 INFO stopped: laravel_schedule_00 (terminated by SIGTERM)
+2022-04-25 06:33:04,235 INFO stopped: laravel_queue_00 (exit status 0)
+2022-04-25 06:33:04,236 INFO stopped: laravel_queue_01 (exit status 0)
+2022-04-25 06:33:04,236 INFO stopped: laravel_queue_02 (exit status 0)
+2022-04-25 06:33:04,236 INFO stopped: laravel_queue_03 (exit status 0)
+2022-04-25 06:48:52,876 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-04-25 06:48:52,879 INFO supervisord started with pid 1
+2022-04-25 06:48:53,885 INFO spawned: 'laravel_queue_00' with pid 7
+2022-04-25 06:48:53,888 INFO spawned: 'laravel_queue_01' with pid 8
+2022-04-25 06:48:53,889 INFO spawned: 'laravel_queue_02' with pid 9
+2022-04-25 06:48:53,890 INFO spawned: 'laravel_queue_03' with pid 10
+2022-04-25 06:48:53,891 INFO spawned: 'laravel_schedule_00' with pid 11
+2022-04-25 06:48:55,060 INFO success: laravel_queue_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-25 06:48:55,061 INFO success: laravel_queue_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-25 06:48:55,061 INFO success: laravel_queue_02 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-25 06:48:55,061 INFO success: laravel_queue_03 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-25 06:48:55,061 INFO success: laravel_schedule_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-25 08:39:05,224 WARN received SIGQUIT indicating exit request
+2022-04-25 08:39:05,224 INFO waiting for laravel_queue_00, laravel_queue_01, laravel_queue_02, laravel_queue_03, laravel_schedule_00 to die
+2022-04-25 08:39:05,231 INFO stopped: laravel_schedule_00 (terminated by SIGTERM)
+2022-04-25 08:39:06,238 INFO stopped: laravel_queue_00 (exit status 0)
+2022-04-25 08:39:06,238 INFO stopped: laravel_queue_01 (exit status 0)
+2022-04-25 08:39:06,239 INFO stopped: laravel_queue_02 (exit status 0)
+2022-04-25 08:39:06,239 INFO stopped: laravel_queue_03 (exit status 0)
+2022-04-28 02:58:55,364 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-04-28 02:58:55,366 INFO supervisord started with pid 1
+2022-04-28 02:58:56,371 INFO spawned: 'laravel_queue_00' with pid 7
+2022-04-28 02:58:56,375 INFO spawned: 'laravel_queue_01' with pid 8
+2022-04-28 02:58:56,379 INFO spawned: 'laravel_queue_02' with pid 9
+2022-04-28 02:58:56,383 INFO spawned: 'laravel_queue_03' with pid 10
+2022-04-28 02:58:56,387 INFO spawned: 'laravel_schedule_00' with pid 11
+2022-04-28 02:58:57,612 INFO success: laravel_queue_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-28 02:58:57,612 INFO success: laravel_queue_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-28 02:58:57,612 INFO success: laravel_queue_02 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-28 02:58:57,612 INFO success: laravel_queue_03 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-28 02:58:57,613 INFO success: laravel_schedule_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

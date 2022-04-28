@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User\Auth;
+namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
@@ -19,7 +19,7 @@ class VerifyEmailController extends Controller
     {
         if ($request->user()->hasVerifiedEmail()) {
             return redirect()->intended(
-                config('app.client_url').RouteServiceProvider::HOME.'?verified=1'
+                config('app.admin_url').RouteServiceProvider::HOME.'?verified=1'
             );
         }
 
@@ -28,7 +28,7 @@ class VerifyEmailController extends Controller
         }
 
         return redirect()->intended(
-            config('app.client_url').RouteServiceProvider::HOME.'?verified=1'
+            config('app.admin_url').RouteServiceProvider::HOME.'?verified=1'
         );
     }
 }

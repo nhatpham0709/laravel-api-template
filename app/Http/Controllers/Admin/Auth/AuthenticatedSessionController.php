@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User\Auth;
+namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\Auth\LoginRequest;
@@ -33,7 +33,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function destroy(Request $request): SuccessResource
     {
-        Auth::guard('web')->logout();
+        Auth::guard('admin')->logout();
 
         $request->session()->invalidate();
 
