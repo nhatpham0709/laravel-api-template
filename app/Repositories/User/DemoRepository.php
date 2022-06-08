@@ -14,12 +14,12 @@ class DemoRepository
      * 
      * @return LengthAwarePaginator|null
      */
-    public function index(): ?LengthAwarePaginator
+    public function getAll(): ?LengthAwarePaginator
     {
         return Demo::paginate(self::PER_PAGE);
     }
 
-    public function show(int $id): ?Demo
+    public function findById(int $id): ?Demo
     {
         return Demo::find($id);
     }

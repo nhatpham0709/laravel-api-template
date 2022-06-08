@@ -2,19 +2,18 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Exceptions\ApiException;
 use App\Http\Controllers\Controller;
-use App\Repositories\User\DemoRepository;
+use App\Services\User\DemoService;
 use App\Transformers\User\DemoPaginationResource;
 use App\Transformers\User\DemoResource;
 
 class DemoController extends Controller
 {
-    protected DemoRepository $demoRepository;
+    private DemoService $demoService;
 
-    public function __construct(DemoRepository $demoRepository)
+    public function __construct(DemoService $demoService)
     {
-        $this->demoRepository = $demoRepository;
+        $this->demoService = $demoService;
     }
 
     /**
@@ -24,7 +23,7 @@ class DemoController extends Controller
      */
     public function index(): DemoPaginationResource
     {
-        $demoResponse = $this->demoRepository->index();
+        $demoResponse = $this->demoService->getAll();
         
         return DemoPaginationResource::make($demoResponse); 
     }
@@ -37,11 +36,7 @@ class DemoController extends Controller
      */
     public function show(int $id): DemoResource
     {
-        $demoResponse = $this->demoRepository->show($id);
-
-        if (!$demoResponse) {
-            throw ApiException::notFound('No demo found');
-        }
+        $demoResponse = $this->demoService->findById($id);
         
         return DemoResource::make($demoResponse); 
     }

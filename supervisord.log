@@ -1953,3 +1953,22 @@
 2022-04-28 02:58:57,612 INFO success: laravel_queue_02 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2022-04-28 02:58:57,612 INFO success: laravel_queue_03 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2022-04-28 02:58:57,613 INFO success: laravel_schedule_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-28 10:12:25,252 WARN received SIGQUIT indicating exit request
+2022-04-28 10:12:25,252 INFO waiting for laravel_queue_00, laravel_queue_01, laravel_queue_02, laravel_queue_03, laravel_schedule_00 to die
+2022-04-28 10:12:25,254 INFO stopped: laravel_schedule_00 (terminated by SIGTERM)
+2022-04-28 10:12:26,258 INFO stopped: laravel_queue_00 (exit status 0)
+2022-04-28 10:12:26,258 INFO stopped: laravel_queue_01 (exit status 0)
+2022-04-28 10:12:26,258 INFO stopped: laravel_queue_02 (exit status 0)
+2022-04-28 10:12:26,259 INFO stopped: laravel_queue_03 (exit status 0)
+2022-06-08 07:06:36,974 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-06-08 07:06:36,976 INFO supervisord started with pid 1
+2022-06-08 07:06:37,981 INFO spawned: 'laravel_queue_00' with pid 7
+2022-06-08 07:06:37,984 INFO spawned: 'laravel_queue_01' with pid 8
+2022-06-08 07:06:37,985 INFO spawned: 'laravel_queue_02' with pid 9
+2022-06-08 07:06:37,986 INFO spawned: 'laravel_queue_03' with pid 10
+2022-06-08 07:06:37,987 INFO spawned: 'laravel_schedule_00' with pid 11
+2022-06-08 07:06:39,225 INFO success: laravel_queue_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-06-08 07:06:39,225 INFO success: laravel_queue_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-06-08 07:06:39,225 INFO success: laravel_queue_02 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-06-08 07:06:39,226 INFO success: laravel_queue_03 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-06-08 07:06:39,226 INFO success: laravel_schedule_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
